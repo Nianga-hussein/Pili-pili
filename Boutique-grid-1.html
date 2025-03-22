@@ -154,15 +154,34 @@
     <div class="container"> <!-- Conteneur parent pour aligner les conteneurs horizontalement -->
         <div class="container1">
             <div class="card">
-                <img src="assets/img/img.png" alt="" class="card__img"> 
+                <img src="assets/img/img.png" alt="" class="card__img" id="itemImage"> 
                 <div class="card__data">
                     <h1 class="card__title">Nike Air Jordan 1</h1>
                     <span class="card__preci">16000XAF</span>
                     <p class="card__description">Nike Air Jordan Footwear basketball sneakers.</p>
-                    <a href="#" class="card__button">Buy Now</a>
+                    <a href="#" class="card__button" id="buyNowButton">Buy Now</a>
                 </div>
             </div>
-        </div>
+            <script>
+                document.getElementById('buyNowButton').addEventListener('click', function(event) {
+                    event.preventDefault(); // Empêche le comportement par défaut du lien
+            
+                    // Récupérer le nom de l'article, le prix et l'URL de l'image
+                    const itemName = document.querySelector('.card__title').innerText;
+                    const itemPrice = document.querySelector('.card__preci').innerText;
+                    const itemImage = document.getElementById('itemImage').src; // Récupérer l'URL de l'image
+            
+                    // Créer le message personnalisé
+                    const message = `Salut l'agence pili-pili, je suis intéressé par "${itemName}" qui coûte "${itemPrice}". Voici l'image : ${itemImage}`;
+            
+                    // Encoder le message pour l'URL
+                    const encodedMessage = encodeURIComponent(message);
+            
+                    // Ouvrir WhatsApp avec le message
+                    const whatsappUrl = `https://wa.me/242069178630?text=${encodedMessage}`;
+                    window.open(whatsappUrl, '_blank');
+                });
+            </script>
         <div class="container2">
             <div class="card">
                 <img src="assets/img/img.png" alt="" class="card__img"> 
