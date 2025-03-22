@@ -158,16 +158,36 @@ img {
 @media (max-width: 768px) {
   .container1, .container2, .container3, .container4, .container5, .container6, .container7, .container8, .container9 {
     width: calc(100% - 40px); /* Une carte par ligne sur les petits écrans */
-  }
+}
 }
 
 @media (max-width: 480px) {
-  .card {
+.container1, .container2, .container3, .container4, .container5, .container6, .container7, .container8, .container9 {
+    width: calc(100% - 20px); /* Une carte par ligne sur les très petits écrans */
+}
+
+.card {
     height: auto; /* Permet à la carte de s'ajuster à son contenu */
     padding: 2rem 1rem; /* Réduit le padding pour les petits écrans */
-  }
+}
 
-  .card__data {
+.card__data {
     transform: translateY(8rem); /* Ajuste la position des données pour les petits écrans */
-  }
+}
+
+.card__title {
+    font-size: 1.25rem; /* Ajuste la taille de la police pour les petits écrans */
+}
+
+.card__preci {
+    font-size: 1rem; /* Ajuste la taille de la police pour les petits écrans */
+}
+
+.card__description {
+    font-size: 0.875rem; /* Ajuste la taille de la police pour les petits écrans */
+}
+
+.card__button {
+    padding: 0.875rem 1.5rem; /* Réduit le padding du bouton pour les petits écrans */
+}
 }
