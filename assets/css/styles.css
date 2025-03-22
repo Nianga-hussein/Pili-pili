@@ -72,10 +72,12 @@ img {
 
 .card__img {
   position: absolute;
-  width: 260px;
+  width: 100%; /* Ajuste l'image pour qu'elle prenne toute la largeur */
+  height: auto; /* Garde le ratio de l'image */
+  top: 0; /* Positionne l'image en haut */
+  left: 0; /* Positionne l'image à gauche */
   filter: drop-shadow(5px 10px 15px rgba(8,9,13,.4));
 }
-
 .card__data {
   transform: translateY(13.2rem);
   text-align: center;
@@ -168,7 +170,7 @@ img {
 
 .card {
     height: auto; /* Permet à la carte de s'ajuster à son contenu */
-    padding: 2rem 1rem; /* Réduit le padding pour les petits écrans */
+    padding: 6rem 5rem; /* Réduit le padding pour les petits écrans */
 }
 
 .card__data {
@@ -189,5 +191,10 @@ img {
 
 .card__button {
     padding: 0.875rem 1.5rem; /* Réduit le padding du bouton pour les petits écrans */
-}
+}.card__img {
+  width: 100%; /* Ajuste l'image pour qu'elle prenne toute la largeur sur les petits écrans */
+  height: auto; /* Garde le ratio de l'image */
+  top: 0; /* Positionne l'image en haut */
+  left: 0; /* Positionne l'image à gauche */
+} 
 }
